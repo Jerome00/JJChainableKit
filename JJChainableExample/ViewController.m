@@ -21,6 +21,8 @@
     self.view.make.backgroundColor([UIColor purpleColor]);
     UIView.make.origin(100, 100).size(50, 50).backgroundColor([UIColor greenColor]).addToSuperview(self.view);
     
+    UILabel.make.backgroundColor([UIColor greenColor]).textAlignment(NSTextAlignmentCenter).lineBreakMode(NSLineBreakByClipping).textColor([UIColor redColor]).numberOfLines(0).text(@"Hello ChainableKit").addToSuperview(self.view);
+
 }
 
 

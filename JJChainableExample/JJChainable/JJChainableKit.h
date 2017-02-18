@@ -30,3 +30,17 @@
 - (ChainableFloat)centerY;
 
 @end
+
+
+@interface JJChainableKit (UILable)
+
+- (ChainableString)text;
+- (ChainableFont)font;
+- (ChainableColor)textColor;
+- (ChainableColor)shadowColor;
+- (ChainableInteger)textAlignment;
+- (ChainableInteger)lineBreakMode;
+- (ChainableAttributedString)attributedText;
+- (ChainableInteger)numberOfLines;
+
+@end

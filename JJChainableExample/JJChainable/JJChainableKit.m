@@ -147,3 +147,82 @@
 }
 
 @end
+
+@implementation JJChainableKit (UILabel)
+
+#pragma mark - UILabel
+
+- (ChainableString)text {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableString(text) {
+        if ([weakSelf.view respondsToSelector:@selector(text)])
+            ((UILabel*)(weakSelf.view)).text = text;
+        return weakSelf;
+    };
+}
+
+- (ChainableFont)font {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableFont(font) {
+        if ([weakSelf.view respondsToSelector:@selector(font)])
+            ((UILabel*)(weakSelf.view)).font = font;
+        return weakSelf;
+    };
+}
+
+- (ChainableColor)textColor {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableColor(textColor) {
+        if ([weakSelf.view respondsToSelector:@selector(textColor)])
+            ((UILabel*)(weakSelf.view)).textColor = textColor;
+        return weakSelf;
+    };
+}
+
+- (ChainableInteger)numberOfLines {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableInteger(numberOfLines) {
+        if ([weakSelf.view respondsToSelector:@selector(numberOfLines)])
+            ((UILabel*)(weakSelf.view)).numberOfLines = numberOfLines;
+        return weakSelf;
+    };
+}
+
+- (ChainableColor)shadowColor {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableColor(shadowColor) {
+        if ([weakSelf.view respondsToSelector:@selector(shadowColor)])
+            ((UILabel*)(weakSelf.view)).shadowColor = shadowColor;
+        return weakSelf;
+    };
+}
+
+- (ChainableInteger)textAlignment {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableInteger(textAlignment) {
+        if ([weakSelf.view respondsToSelector:@selector(textAlignment)])
+            ((UILabel*)(weakSelf.view)).textAlignment = textAlignment;
+        return weakSelf;
+    };
+}
+
+- (ChainableInteger)lineBreakMode {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableInteger(lineBreakMode) {
+        if ([weakSelf.view respondsToSelector:@selector(lineBreakMode)])
+            ((UILabel*)(weakSelf.view)).lineBreakMode = lineBreakMode;
+        return weakSelf;
+    };
+}
+
+- (ChainableAttributedString)attributedText {
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableAttributedString(attributedText) {
+        if ([weakSelf.view respondsToSelector:@selector(attributedText)])
+            ((UILabel*)(weakSelf.view)).attributedText = attributedText;
+        return weakSelf;
+    };
+}
+
+@end
+

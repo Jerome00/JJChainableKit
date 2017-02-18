@@ -40,4 +40,8 @@ typedef JJChainableKit* (^ChainableSize)(CGFloat width, CGFloat height);
 typedef JJChainableKit* (^ChainableFloat)(CGFloat f);
 #define ChainableFloat(f) ^JJChainableKit* (CGFloat f)
 
+typedef JJChainableKit* (^ChainableInteger)(NSInteger i);
+#define ChainableInteger(i) ^JJChainableKit* (NSInteger i)
+
+
 #endif
