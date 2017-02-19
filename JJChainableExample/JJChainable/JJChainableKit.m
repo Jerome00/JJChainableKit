@@ -148,6 +148,8 @@
 
 @end
 
+
+/** 添加 UILable 分类 */
 @implementation JJChainableKit (UILabel)
 
 #pragma mark - UILabel
@@ -227,6 +229,7 @@
 @end
 
 
+/** 添加 UITextField 分类 */
 @implementation JJChainableKit (UITextField)
 
 - (ChainableString)text{
