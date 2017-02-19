@@ -42,5 +42,21 @@
 - (ChainableInteger)lineBreakMode;
 - (ChainableAttributedString)attributedText;
 - (ChainableInteger)numberOfLines;
+- (ChainableFloat)minimumFontSize;
 
 @end
+
+@interface JJChainableKit (UITextField)
+- (ChainableString)text;
+- (ChainableColor)textColor;
+- (ChainableFont)font;
+- (ChainableInteger)textAlignment;
+- (ChainableString)placeholder;
+- (ChainableInteger)borderStyle;
+@end
+
+
+
+
+
+

@@ -226,3 +226,68 @@
 
 @end
 
+
+@implementation JJChainableKit (UITextField)
+
+- (ChainableString)text{
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableString(text){
+        if ([weakSelf.view respondsToSelector:@selector(text)])
+            ((UITextField *)(weakSelf.view)).text=text;
+            return weakSelf;
+    };
+}
+
+- (ChainableColor)textColor{
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableColor(textColor){
+        if ([weakSelf.view respondsToSelector:@selector(textColor)])
+            ((UITextField *)(weakSelf.view)).textColor=textColor;
+        return weakSelf;
+    };
+}
+- (ChainableFont)font{
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableFont(font){
+        if ([weakSelf.view respondsToSelector:@selector(font)])
+            ((UITextField *)(weakSelf.view)).font=font;
+        return weakSelf;
+    };
+}
+- (ChainableInteger)textAlignment{
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableInteger(textAlignment){
+        if ([weakSelf.view respondsToSelector:@selector(textAlignment)])
+            ((UITextField *)(weakSelf.view)).textAlignment=textAlignment;
+        return weakSelf;
+    };
+}
+- (ChainableString)placeholder{
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableString(placeholder){
+        if ([weakSelf.view respondsToSelector:@selector(placeholder)])
+            ((UITextField *)(weakSelf.view)).placeholder=placeholder;
+        return weakSelf;
+    };
+}
+- (ChainableInteger)borderStyle{
+    __weak JJChainableKit *weakSelf = self;
+    return ChainableInteger(borderStyle){
+        if ([weakSelf.view respondsToSelector:@selector(borderStyle)])
+            ((UITextField *)(weakSelf.view)).borderStyle=borderStyle;
+        return weakSelf;
+    };
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
